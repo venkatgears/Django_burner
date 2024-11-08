@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+
+
+{% block content %}
+<h1>BLock cont ent</h1>
+
+<div>
+    
+    {% for room in rooms  %}
+        <ol>
+            <li><a href= "{% url  'room' room.id %}" >{{ room.id}}  {{room.name}}</a> </li>
+        </ol>
+    {% endfor %}
+        
+</div>
+{% endblock content %}
